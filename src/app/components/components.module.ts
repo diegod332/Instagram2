@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { CardPostComponent } from './card-post/card-post.component';
 import { LayoutComponent } from './layout/layout.component';
-
+import {StoriesComponent} from './stories/stories.component';
 @NgModule({
   declarations: [
     CardPostComponent,
@@ -11,11 +11,12 @@ import { LayoutComponent } from './layout/layout.component';
   ],
   imports: [
     CommonModule,
-    IonicModule
+    IonicModule,
+    StoriesComponent
   ],
   exports: [
     CardPostComponent,
-    LayoutComponent
+    LayoutComponent,
   ]
 })
 export class ComponentsModule { }

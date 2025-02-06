@@ -1,0 +1,76 @@
+.stories-container {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px;
+  margin-bottom: 10px;
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+  background-color: #1e1e1e;
+}
+
+.stories-container::-webkit-scrollbar {
+  display: none; 
+}
+
+.story {
+  position: relative; /* Necesario para posicionar el botón dentro de la imagen */
+  text-align: center;
+  margin-right: 10px;
+
+  img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 2px solid #ff4081;
+      max-width: 80px;
+      max-height: 80px;
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+          transform: scale(1.1);
+      }
+  }
+
+  p {
+      margin: 5px 0 0;
+      font-size: 14px;
+      color: #fcfcfc;
+  }
+
+  /* Botón de añadir historia (solo en el primer story) */
+  .add-story-icon {
+      position: absolute;
+      bottom: 0; /* Se ajusta a la parte inferior de la imagen */
+      right: 0; /* Se ajusta a la parte derecha de la imagen */
+      background-color: #000000;
+      font-size: 18px;
+      border-radius: 50%;
+      width: 22px;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid white; /* Borde blanco para destacar */
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+          transform: scale(1.2);
+      }
+  }
+}
+.story-user {
+  position: relative;
+  display: inline-block;
+}
+
+.add-story-icon {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: 24px; /* Tamaño del icono */
+  color: #ffffff; /* Color del icono */
+  background-color: rgb(255, 255, 255); /* Fondo blanco */
+  border-radius: 50%;
+}
+

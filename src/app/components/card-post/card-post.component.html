@@ -1,12 +1,23 @@
 <ion-card>
-  <img [src]="post.image" alt="Post image" />
   <ion-card-header>
-    <ion-card-title>{{ post.title }}</ion-card-title>
-    <ion-card-subtitle>{{ post.subtitle }}</ion-card-subtitle>
+    <ion-item lines="none">
+      <ion-avatar slot="start">
+        <img [src]="post.user.avatar" alt="User avatar" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ post.user.name }}</h2> <p>{{post.user.date}}</p>
+      </ion-label>
+    </ion-item>
   </ion-card-header>
+
+  <img [src]="post.image" alt="Post image" />
+
+
+
   <ion-card-content>
     {{ post.content }}
   </ion-card-content>
+
   <ion-row>
     <ion-col>
       <ion-button fill="clear" (click)="likePost()">

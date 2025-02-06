@@ -1,0 +1,16 @@
+<div class="stories-container">
+  <!-- Historia del Usuario con Icono "+" -->
+  <div class="story">
+    <div class="story-user">
+      <img [src]="userStory.image" alt="Tu historia" />
+      <ion-icon name="add-circle" class="add-story-icon"></ion-icon>
+    </div>
+    <p>{{ userStory.username }}</p>
+  </div>
+
+  <!-- Otras Historias -->
+  <div class="story" *ngFor="let story of stories">
+    <img [src]="story.image" alt="Story" />
+    <p>{{ story.username }}</p>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
+import { StoriesComponent } from '../components/stories/stories.component';
 import { IonicModule } from '@ionic/angular';
 import { ComponentsModule } from '../components/components.module';
 import { FeedPageRoutingModule } from './feed-routing.module';
@@ -14,7 +14,8 @@ import { FeedPage } from './feed.page';
     FormsModule,
     IonicModule,
     FeedPageRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    StoriesComponent
   ],
   declarations: [
     FeedPage
